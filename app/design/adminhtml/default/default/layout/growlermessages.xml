@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<layout>
+    <default>
+        <reference name="head">
+            <action method="addItem"><type>js</type><name>growlermessages/growler.js</name></action>
+            <action method="addItem"><type>skin_css</type><name>growlermessages/css/growler.css</name></action>
+        </reference>
+
+        <reference name="js">
+            <block type="adminhtml/template" as="growlermessages_js" name="growlermessages_js" template="growlermessages/js/growler.phtml" />
+        </reference>
+    </default>
+</layout>

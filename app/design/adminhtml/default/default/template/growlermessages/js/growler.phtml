@@ -1,0 +1,41 @@
+<script type="text/javascript">
+    function growlMessages(messages) {
+        var growler = new Growler({});
+        
+        var typeTranslation = {
+            error: 'error',
+            warning: 'warn',
+            notice: 'growl',
+            success: 'info'
+        };
+        
+        for (var i = 0; i < messages.length; i++) {
+            var message = messages[i];
+            growler[typeTranslation[message.type]](message.text, {classname: 'plain'});
+        }
+    }
+    
+    Ajax.Responders.register({
+        onComplete: function(data) {
+            $('messages').hide();
+
+            if (! $('messages').innerText.isJSON()) {
+                return;
+            }
+
+            growlMessages($('messages').innerText.evalJSON());
+        }
+    });
+</script>
+
+<?php
+$_messagesData = Mage::helper('growlermessages')->getMessages();
+
+if (empty($_messagesData)) {
+    return;
+}
+?>
+
+<script type="text/javascript">
+    growlMessages(<?php echo json_encode($_messagesData); ?>);
+</script>

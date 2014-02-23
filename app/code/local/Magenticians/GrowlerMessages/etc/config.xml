@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Magenticians_GrowlerMessages>
+            <version>0.0.1</version>
+        </Magenticians_GrowlerMessages>
+    </modules>
+
+    <global>
+        <models>
+            <growlermessages>
+                <class>Magenticians_GrowlerMessages_Model</class>
+            </growlermessages>
+        </models>
+
+        <helpers>
+            <growlermessages>
+                <class>Magenticians_GrowlerMessages_Helper</class>
+            </growlermessages>
+        </helpers>
+    </global>
+
+    <adminhtml>
+        <layout>
+            <updates>
+                <growlermessages>
+                    <file>growlermessages.xml</file>
+                </growlermessages>
+            </updates>
+        </layout>
+
+        <events>
+            <controller_action_layout_generate_blocks_before>
+                <observers>
+                    <magenticians_growlermessages_relaymessages>
+                        <class>growlermessages/Observer</class>
+                        <method>relayMessages</method>
+                    </magenticians_growlermessages_relaymessages>
+                </observers>
+            </controller_action_layout_generate_blocks_before>
+        </events>
+
+        <events>
+            <http_response_send_before>
+                <observers>
+                    <magenticians_growlermessages_altermessagesresponse>
+                        <class>growlermessages/Observer</class>
+                        <method>alterMessageResponse</method>
+                    </magenticians_growlermessages_altermessagesresponse>
+                </observers>
+            </http_response_send_before>
+        </events>
+    </adminhtml>
+</config>
