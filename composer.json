@@ -1,0 +1,16 @@
+{
+	"name": "magenticians/growlermessages",
+	"version": "0.0.1",
+	"type": "magento-module",
+	"homepage": "http://magenticians.com/tag/growler",
+	"description": "Magento Extension which will replace standard Magento messages with Growler notifications in your Magento back-end",
+	"authors": [
+		{
+			"name": "Elias",
+			"homepage": "http://eliaszerrouq.nl"
+		}
+	],
+	"require": {
+		"magento-hackathon/magento-composer-installer": "*"
+	}
+}

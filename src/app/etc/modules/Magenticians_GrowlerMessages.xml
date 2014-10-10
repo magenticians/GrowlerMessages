@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Magenticians_GrowlerMessages>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Magenticians_GrowlerMessages>
+    </modules>
+</config>

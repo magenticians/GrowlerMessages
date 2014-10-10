@@ -1,0 +1,6 @@
+src/app/code/community/Magenticians/GrowlerMessages app/code/community/Magenticians/GrowlerMessages
+src/app/etc/modules/Magenticians_GrowlerMessages.xml app/etc/modules/Magenticians_GrowlerMessages.xml
+src/app/design/adminhtml/default/default/layout/growlermessages.xml app/design/adminhtml/default/default/layout/growlermessages.xml
+src/app/design/adminhtml/default/default/template/growlermessages app/design/adminhtml/default/default/template/growlermessages
+src/js/growlermessages js/growlermessages
+src/skin/adminhtml/default/default/growlermessages skin/adminhtml/default/default/growlermessages
